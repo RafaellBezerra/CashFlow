@@ -14,6 +14,14 @@ Dentre os pacotes NuGet utilizados. o **AutoMapper** é o responsável pelo mape
 - **RESTful API com Documentação Swagger**: Interface documentada que facilita a integração e o teste por parte dos desenvolvedores.
 - **Mapeamento Automático com AutoMapper**: Redução de código repetitivo através da conversão simplificada entre objetos de domínio e DTOs.
 
+## Construído com
+
+![badge-dotnet]
+![badge-windows]
+![badge-vs]
+![badge-mysql]
+![badge-swagger]
+
 ## Getting Started
 
 Para obter uma cópia local funcionando, siga estes passos simples.
@@ -33,3 +41,10 @@ Para obter uma cópia local funcionando, siga estes passos simples.
 
 2. Preencha as informações no arquivo `appsettings.Development.json`.
 3. Execute a API e aproveite o teste ;)
+
+
+[badge-dotnet]: https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=fff&style=for-the-badge
+[badge-vs]: https://img.shields.io/badge/VISUAL%20STUDIO-%235c2d91?style=for-the-badge
+[badge-windows]: https://img.shields.io/badge/WINDOWS-%230078D4?style=for-the-badge
+[badge-mysql]: https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff&style=for-the-badge
+[badge-swagger]: https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=000&style=for-the-badge

@@ -1,0 +1,20 @@
+﻿using CashFlow.Communication.Requests;
+using CashFlow.Exception;
+using FluentValidation;
+
+namespace CashFlow.Application.UseCases.Users.Register
+{
+    public class RegisterUserValidator : AbstractValidator<RequestRegisterUser>
+    {
+        public RegisterUserValidator()
+        {
+            RuleFor(u => u.Name).NotEmpty().WithMessage(ResourceErrorMessages.NAME_EMPTY);
+            RuleFor(u => u.Email)
+                .NotEmpty().WithMessage(ResourceErrorMessages.EMAIL_EMPTY)
+                .EmailAddress().When(u => string.IsNullOrWhiteSpace(u.Email) == false, ApplyConditionTo.CurrentValidator)
+                .WithMessage(ResourceErrorMessages.EMAIL_INVALID);
+
+            RuleFor(u => u.Password).SetValidator(new PasswordValidator<RequestRegisterUser>());
+        }
+    }
+}

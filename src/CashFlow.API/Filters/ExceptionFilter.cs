@@ -16,7 +16,7 @@ public class ExceptionFilter : IExceptionFilter
         }
         else
         {
-            ThrowUnknowError(context);
+            ThrowUnknownError(context);
         }
     }
 
@@ -29,7 +29,7 @@ public class ExceptionFilter : IExceptionFilter
         context.Result = new ObjectResult(responseError);
     }
 
-    private void ThrowUnknowError(ExceptionContext context)
+    private void ThrowUnknownError(ExceptionContext context)
     {
         var responseError = new ResponseError(ResourceErrorMessages.UNKNOWN_MSG_ERRO);
 
